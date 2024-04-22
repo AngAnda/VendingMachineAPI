@@ -1,0 +1,14 @@
+﻿using VendingMachine.Business.Dtos;
+using VendingMachine.Business.DTOs;
+
+namespace VendingMachine.Business.Services
+{
+    public interface IProductService
+    {
+        int CreateProduct(ProductDto productDto);
+        void DeleteProduct(int id);
+        ProductOutputDto GetProduct(int id);
+        List<ProductOutputDto> GetProducts();
+        void UpdateProduct(int id, ProductDto updatedProductDto);
+    }
+}
