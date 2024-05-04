@@ -16,6 +16,13 @@ namespace VendingMachine.Apis
             services.AddAutoMapper();
             services.AddBusinessServices();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder.WithOrigins("http://localhost:4200")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod());
+            });
             services.AddControllers()
                 .ConfigureApiBehaviorOptions(options =>
                 {
@@ -38,6 +45,8 @@ namespace VendingMachine.Apis
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("AllowSpecificOrigin");
 
             app.UseAuthorization();
 

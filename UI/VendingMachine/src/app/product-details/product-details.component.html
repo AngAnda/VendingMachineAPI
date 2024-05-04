@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="info">
+      <div class="name">{{product.name}}</div>
+      <div class="description">{{product.description}}</div>
+    </div>
+    <div class="actions">
+      <div class="price">{{product.price | currency : "EUR"}}</div>
+      <button class="button" (click)="buyButtonClicked" >Buy</button>
+    </div>
+  </div>
+  

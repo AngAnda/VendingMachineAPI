@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+$primary-color: #5C67F2;
+$secondary-color: #FFA500;
+$text-color: #333;
+$background-color: #F8F8F8;
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: $text-color;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}

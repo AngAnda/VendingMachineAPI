@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+$primary-color: #5C67F2;
+$secondary-color: #FFA500;
+$text-color: #333;
+$background-color: #F8F8F8;
+
+.card {
+    font-family: 'Lato', sans-serif;
+    margin: 10px;
+    width: 500px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    transition: all 0.3s ease;
+
+    &:hover {
+      animation: hover-animation 0.3s forwards;
+    }
+}
+
+@keyframes hover-animation {
+    0% {
+      border-color: transparent;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+    100% {
+      border-color: $primary-color;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.info {
+    flex: 1; 
+}
+
+.actions {
+    align-items: center;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid $primary-color;
+    min-width: 120px; 
+}
+
+.name, .description, .id, .price {
+    margin: 8px 0;
+}
+
+.name {
+    font-size: 24px;
+    color: $primary-color;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.id {
+    font-size: 14px;
+    color: $secondary-color;
+}
+
+.price {
+    font-size: 20px;
+    color: $secondary-color;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button {
+    width: 100%; 
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
