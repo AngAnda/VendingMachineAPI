@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProductsListsComponent } from "./products-lists/products-lists.component";
-import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-root',
@@ -11,5 +10,14 @@ import { HttpClient } from '@angular/common/http';
     imports: [RouterOutlet, ProductsListsComponent]
 })
 export class AppComponent {
+delete() {
+throw new Error('Method not implemented.');
+}
+update() {
+throw new Error('Method not implemented.');
+}
+add() {
+throw new Error('Method not implemented.');
+}
   title = 'VendingMachine';
 }

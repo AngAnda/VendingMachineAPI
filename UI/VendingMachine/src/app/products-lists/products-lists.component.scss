@@ -1,0 +1,29 @@
+$primary-color: #5C67F2;
+$secondary-color: #FFA500;
+$text-color: #333;
+$background-color: #F8F8F8;
+
+
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    font-size: 20px;
+    width: 100%; 
+    height: 40px;
+    padding: 8px 16px;
+    margin-top: 10px;
+    margin: 0 1px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
