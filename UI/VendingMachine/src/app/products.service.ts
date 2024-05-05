@@ -18,6 +18,17 @@ export class ProductsService {
      return this.http.delete(`https://localhost:7156/api/products/${id}`)
    }
 
+   addProduct(product:IProduct):Observable<any>{
+    const payload = {
+      name: product.name,
+      description: product.description,
+      quantity: product.quantity,
+      price: product.price
+    }
+
+      return this.http.post(`https://localhost:7156/api/products`, payload)
+   }
+
   constructor(private http: HttpClient) 
   { 
     this.products = []

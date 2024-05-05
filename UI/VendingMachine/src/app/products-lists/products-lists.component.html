@@ -4,7 +4,7 @@
     <button class="button" (click)="delete()">Delete</button>
 </div>
 
-<h3>{{currentProductId}}</h3>
+<h3>Currently selected product: {{currentProductId}}</h3>
 <div class="card" *ngFor="let product of products">    
     <vdm-product-details [product]="product" (buy)="addToCart(product)"></vdm-product-details>
 </div>

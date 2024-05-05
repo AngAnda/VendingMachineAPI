@@ -1,1 +1,23 @@
-<p>add-product works!</p>
+<form class="product-form" (ngSubmit)="add()">
+    <div class="form-group">
+    <label for="productName">Product Name:</label>
+    <input name="name" type="text" id="productName" placeholder="Enter product name" [(ngModel)]="product.name" >
+    </div>
+
+    <div class="form-group">
+    <label for="productDescription">Product Description:</label>
+    <textarea name="description" id="productDescription" placeholder="Enter product description" [(ngModel)]="product.description"></textarea>
+    </div>
+
+    <div class="form-group">
+    <label for="productQuantity">Quantity:</label>
+    <input name="quantity" type="number" id="productQuantity" min="0" step="1" placeholder="Enter quantity" [(ngModel)]="product.quantity">
+    </div>
+
+    <div class="form-group">
+    <label for="productPrice">Price:</label>
+    <input name="price" type="number" min="0.01" step="0.01" id="productPrice" placeholder="Enter price" [(ngModel)]="product.price">
+    </div>
+
+    <button type="submit" class="submit-btn"  [disabled]="!product.name || !product.price || !product.quantity">Add Product</button>
+</form>

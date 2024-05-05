@@ -54,7 +54,7 @@ export class ProductsListsComponent {
     this.deleteProduct(this.currentProductId)
   }
   update() {
-  throw new Error('Method not implemented.');
+    this.router.navigate(['/edit']);
   }
   add() {
     this.router.navigate(['/add']);

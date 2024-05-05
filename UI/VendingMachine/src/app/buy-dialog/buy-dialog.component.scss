@@ -1,0 +1,33 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+$primary-color: #5C67F2;
+$secondary-color: #FFA500;
+$text-color: #333;
+$background-color: #F8F8F8;
+
+::ng-deep .mat-dialog-container {
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255,255,255,0.5);
+}
+
+  mat-dialog-container{
+    font-family: 'Lato', sans-serif;
+    background-color: $background-color;  
+  }
+  
+  mat-dialog-content {
+    margin-bottom: 20px; 
+  }
+  
+  mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  button {
+    min-width: 90px; 
+
+  }
+  

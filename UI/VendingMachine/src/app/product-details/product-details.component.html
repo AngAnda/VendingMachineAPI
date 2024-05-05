@@ -2,10 +2,12 @@
     <div class="info">
       <div class="name">{{product.name}}</div>
       <div class="description">{{product.description}}</div>
+      <div class="stock">Stock : {{product.quantity}}</div>
     </div>
     <div class="actions">
       <div class="price">{{product.price | currency : "EUR"}}</div>
-      <button class="button" (click)="buyButtonClicked()" >Buy</button>
+      <button class="button" (click)="selectButtonClicked()">Select</button>
+      <button class="button" (click)="buyButtonClicked()">Buy</button>
     </div>
   </div>
   
