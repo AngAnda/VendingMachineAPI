@@ -66,7 +66,7 @@ export class ProductsListsComponent {
     this.deleteProduct(this.currentProductId)
   }
   update() {
-    this.router.navigate(['/edit']);
+    this.router.navigate(['/edit', this.currentProductId]);
   }
   add() {
     this.router.navigate(['/add']);

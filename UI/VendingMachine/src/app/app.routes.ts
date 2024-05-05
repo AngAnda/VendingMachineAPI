@@ -5,7 +5,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 
 export const routes: Routes = [
     {path: 'add', component: AddProductComponent},
-    {path: 'edit', component: EditProductComponent},
+    {path: 'edit/:id', component: EditProductComponent},
     {path: '', component: ProductsListsComponent}
 
 ];

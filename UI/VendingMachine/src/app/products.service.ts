@@ -10,6 +10,11 @@ export class ProductsService {
 
   products:IProduct[];
 
+
+  getProduct(id:number):Observable<IProduct>{
+    return this.http.get<IProduct>(`https://localhost:7156/api/products/${id}`);
+  }
+
    getProducts(): Observable<IProduct[]>{
      return this.http.get<IProduct[]>('https://localhost:7156/api/products');
    }
@@ -26,6 +31,16 @@ export class ProductsService {
       price: product.price
     }
     return this.http.post(`https://localhost:7156/api/products`, payload)
+   }
+
+   editProduct(product:IProduct):Observable<any>{
+    const payload = {
+      name: product.name,
+      description: product.description,
+      quantity: product.quantity,
+      price: product.price
+    }
+    return this.http.put(`https://localhost:7156/api/products/${product.id}`, payload);
    }
 
    buyProduct(product:IProduct): Observable<any>{
