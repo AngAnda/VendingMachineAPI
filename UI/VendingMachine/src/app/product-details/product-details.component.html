@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" [ngClass]="{'low-stock': product.quantity < 10}">
     <div class="info">
       <div class="name">{{product.name}}</div>
       <div class="description">{{product.description}}</div>

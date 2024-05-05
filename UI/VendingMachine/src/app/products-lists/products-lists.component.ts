@@ -45,7 +45,19 @@ export class ProductsListsComponent {
         this.loadProducts();
       },
       error: (error) =>{
-        console.error('Error deleting product', error)
+        console.error('Error deleting product', error);
+      }
+    })
+  }
+
+  buyProduct(product:IProduct){
+    this.productSvc.buyProduct(product).subscribe({
+      next: (response) =>{
+        console.log('Product bought successfully');
+        this.loadProducts();
+      },
+      error: (error) =>{
+        console.error('Error detecting product', error);
       }
     })
   }
@@ -58,6 +70,10 @@ export class ProductsListsComponent {
   }
   add() {
     this.router.navigate(['/add']);
+  }
+
+  buy(product:IProduct){
+   this.buyProduct(product);
   }
 
 

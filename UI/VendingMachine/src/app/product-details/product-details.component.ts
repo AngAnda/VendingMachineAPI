@@ -17,16 +17,18 @@ export class ProductDetailsComponent {
 
   @Input() product!:IProduct;
   @Output() buy = new EventEmitter();
+  @Output() select = new EventEmitter();
 
   constructor(private dialog: MatDialog){}
 
 
   buyButtonClicked():void{
     this.dialog.open(BuyDialogComponent);
+    this.buy.emit();
   }
   
   selectButtonClicked() {
-    this.buy.emit();
+    this.select.emit();
   }
 
 }

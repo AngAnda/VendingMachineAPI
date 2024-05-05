@@ -4,6 +4,7 @@ $primary-color: #5C67F2;
 $secondary-color: #FFA500;
 $text-color: #333;
 $background-color: #F8F8F8;
+$low-stock : rgb(137, 19, 19);
 
 .card {
     font-family: 'Lato', sans-serif;
@@ -64,7 +65,7 @@ $background-color: #F8F8F8;
 
 .stock{
     font-size: 13px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .id {
@@ -92,3 +93,26 @@ $background-color: #F8F8F8;
         background-color: darken($primary-color, 10%);
     }
 }
+
+.card.low-stock {
+    border: 2px solid $low-stock; 
+  
+    .name{
+        color: $low-stock;
+    }
+    .button{
+        background-color: $low-stock;
+    }
+
+    .actions{
+        border-left: 1px solid $low-stock;       
+    }
+
+    .stock{
+        color:$low-stock;
+        text-decoration: underline;
+        font-weight:bolder;
+    }
+
+  }
+  

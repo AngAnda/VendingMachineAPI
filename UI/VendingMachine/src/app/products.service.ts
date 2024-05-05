@@ -25,8 +25,17 @@ export class ProductsService {
       quantity: product.quantity,
       price: product.price
     }
+    return this.http.post(`https://localhost:7156/api/products`, payload)
+   }
 
-      return this.http.post(`https://localhost:7156/api/products`, payload)
+   buyProduct(product:IProduct): Observable<any>{
+    const payload = {
+      name: product.name,
+      description: product.description,
+      quantity: product.quantity-1,
+      price: product.price
+    }
+    return this.http.put(`https://localhost:7156/api/products/${product.id}`, payload);
    }
 
   constructor(private http: HttpClient) 
